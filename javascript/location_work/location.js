@@ -101,7 +101,7 @@ var visitorGeolocation = new geolocate(false, true, 'visitorGeolocation');
 // Postal Code setting
 var geo_callback = function(){
 	$.get(
-		'https://maps.googleapis.com/maps/api/timezone/json?location=' + visitorGeolocation.getField('latitude') + ',' + visitorGeolocation.getField('longitude') + '&timestamp=1988000000&key=AIzaSyASAABmEJbUZk3bKblcxFoK1kj0i_PHFgY',
+		'https://maps.googleapis.com/maps/api/timezone/json?location=' + visitorGeolocation.getField('latitude') + ',' + visitorGeolocation.getField('longitude') + '&timestamp=1988000000&key={your_googlemap_api}',
 		function(result){
 			$(".logmod__tab-wrapper").find('input[name="zipcode"]').val(visitorGeolocation.getField('zipCode'));
 			$(".logmod__tab-wrapper").find('input[name="address_state"]').val(visitorGeolocation.getField('countryName'));
